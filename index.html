@@ -4,858 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سياسة الخصوصية | تطبيق الرحيق المختوم</title>
-    <meta name="description" content="وثيقة سياسة الخصوصية الرسمية لتطبيق الرحيق المختوم - بحث وقراءة في السيرة النبوية المطهرة. خلو تام من الإعلانات وجمع البيانات.">
     <link rel="icon" type="image/png" href="app_logo.png">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0A1612;
-            --bg-secondary: #10221C;
-            --bg-card: rgba(19, 39, 33, 0.75);
-            --bg-card-border: rgba(197, 160, 89, 0.25);
-            --gold-primary: #C5A059;
+            --bg: #0A1612;
+            --card-bg: #12241E;
+            --gold: #C5A059;
             --gold-light: #F2D06B;
-            --gold-gradient: linear-gradient(135deg, #F2D06B 0%, #C5A059 50%, #9E7D3B 100%);
-            --text-primary: #FAF8F5;
-            --text-secondary: #C8D6D1;
-            --text-muted: #8FA69F;
-            --accent-green: #1F4D3E;
-            --badge-bg: rgba(197, 160, 89, 0.12);
-            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.4);
-            --radius-md: 16px;
-            --radius-lg: 24px;
+            --text: #FAF8F5;
+            --text-muted: #A3B8B0;
+            --border: rgba(197, 160, 89, 0.25);
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             line-height: 1.8;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(31, 77, 62, 0.45) 0%, transparent 60%),
-                radial-gradient(circle at 10% 90%, rgba(197, 160, 89, 0.08) 0%, transparent 50%);
-            background-attachment: fixed;
+            padding: 2rem 1rem;
             min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2.5rem 1.5rem 4rem 1.5rem;
-        }
-
-        /* Top Navigation & Language Switcher */
-        .header-nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.25rem;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-        }
-
-        .lang-switch {
-            background: var(--bg-secondary);
-            border: 1px solid var(--gold-primary);
-            color: var(--gold-light);
-            padding: 0.5rem 1.25rem;
-            border-radius: 30px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .lang-switch:hover {
-            background: var(--gold-primary);
-            color: var(--bg-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
-        }
-
-        /* Hero Header */
-        .hero {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .app-logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 28px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 30px rgba(197, 160, 89, 0.25);
-            border: 2px solid rgba(242, 208, 107, 0.4);
-            margin-bottom: 1.5rem;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .app-logo:hover {
-            transform: scale(1.05) rotate(1deg);
-        }
-
-        .app-title {
-            font-family: 'Amiri', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 650px;
-            margin: 0 auto 1.25rem auto;
-        }
-
-        .badge-list {
-            display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 0.75rem;
-            margin-top: 1rem;
-        }
-
-        .badge {
-            display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.9rem;
-            background: var(--badge-bg);
-            border: 1px solid rgba(197, 160, 89, 0.35);
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
             border-radius: 20px;
+            max-width: 680px;
+            width: 100%;
+            padding: 2.2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo {
+            width: 84px;
+            height: 84px;
+            border-radius: 20px;
+            border: 2px solid var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        .app-name {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
             color: var(--gold-light);
-            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        .doc-title {
+            font-size: 1.1rem;
+            color: var(--text-muted);
             font-weight: 600;
         }
-
-        /* Summary Banner */
-        .summary-banner {
-            background: linear-gradient(135deg, rgba(31, 77, 62, 0.6) 0%, rgba(16, 34, 28, 0.8) 100%);
-            border: 1px solid rgba(242, 208, 107, 0.4);
-            border-radius: var(--radius-lg);
-            padding: 1.75rem;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow-subtle);
-            position: relative;
-            overflow: hidden;
+        .content {
+            font-size: 1rem;
+            color: var(--text);
         }
-
-        .summary-banner::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 6px;
-            height: 100%;
-            background: var(--gold-gradient);
-        }
-
-        .summary-title {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 1.35rem;
-            color: var(--gold-light);
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .summary-text {
-            color: var(--text-primary);
-            font-size: 1.05rem;
-            line-height: 1.9;
-        }
-
-        /* Policy Sections */
-        .policy-card {
-            background: var(--bg-card);
-            border: 1px solid var(--bg-card-border);
-            border-radius: var(--radius-md);
-            padding: 1.75rem;
-            margin-bottom: 1.75rem;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: var(--shadow-subtle);
-            transition: border-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .policy-card:hover {
-            border-color: rgba(242, 208, 107, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
+        .content p {
             margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(197, 160, 89, 0.15);
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            color: var(--gold-light);
-            flex-shrink: 0;
-        }
-
-        .card-title {
-            font-size: 1.3rem;
-            color: var(--gold-light);
-            font-weight: 700;
-        }
-
-        .card-body {
-            color: var(--text-secondary);
-            font-size: 1.02rem;
-            line-height: 1.85;
-        }
-
-        .card-body p {
-            margin-bottom: 0.85rem;
-        }
-
-        .card-body p:last-child {
-            margin-bottom: 0;
-        }
-
-        .card-body ul {
+        .points {
             list-style: none;
-            padding-right: 0.5rem;
-            margin: 0.75rem 0;
+            margin: 1.25rem 0;
         }
-
-        .card-body ul li {
+        .points li {
             position: relative;
             padding-right: 1.75rem;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.85rem;
         }
-
-        .card-body ul li::before {
+        .points li::before {
             content: "✦";
             position: absolute;
             right: 0;
-            color: var(--gold-primary);
+            color: var(--gold);
             font-size: 0.85rem;
-            top: 2px;
         }
-
-        /* Specific Highlight Box */
-        .highlight-box {
-            background: rgba(10, 22, 18, 0.7);
-            border: 1px dashed rgba(197, 160, 89, 0.35);
-            border-radius: 12px;
-            padding: 1.1rem;
-            margin: 0.85rem 0;
-            color: var(--text-primary);
-            font-size: 0.95rem;
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 2rem 0;
         }
-
-        /* Metadata & Details Grid */
-        .meta-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .meta-item {
-            background: rgba(0, 0, 0, 0.25);
-            padding: 1rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .meta-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 0.25rem;
-        }
-
-        .meta-value {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--gold-light);
-            word-break: break-all;
-        }
-
-        /* Contact & Footer */
-        .contact-card {
-            background: linear-gradient(135deg, rgba(16, 34, 28, 0.9) 0%, rgba(31, 77, 62, 0.5) 100%);
-            border: 1px solid var(--gold-primary);
-            text-align: center;
-            padding: 2.5rem 1.5rem;
-            border-radius: var(--radius-lg);
-            margin-top: 3rem;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: var(--gold-gradient);
-            color: #0A1612;
-            padding: 0.85rem 2rem;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.05rem;
-            text-decoration: none;
-            margin-top: 1.25rem;
-            box-shadow: 0 4px 18px rgba(197, 160, 89, 0.35);
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
-            color: #000;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 3.5rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--gold-primary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        footer a:hover {
-            color: var(--gold-light);
-            text-decoration: underline;
-        }
-
-        /* LTR Style Overrides for English View */
-        body.lang-en {
+        /* English Section (Minimal) */
+        .en-section {
             direction: ltr;
             text-align: left;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
-
-        body.lang-en .summary-banner::before {
-            right: auto;
+        .en-section h3 {
+            color: var(--gold-light);
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+        }
+        .en-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.6rem;
+        }
+        .en-section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+        }
+        .en-section ul li::before {
+            content: "✦";
+            position: absolute;
             left: 0;
+            color: var(--gold);
         }
-
-        body.lang-en .card-body ul {
-            padding-right: 0;
-            padding-left: 0.5rem;
+        .footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
-
-        body.lang-en .card-body ul li {
-            padding-right: 0;
-            padding-left: 1.75rem;
+        .footer a {
+            color: var(--gold-light);
+            text-decoration: none;
         }
-
-        body.lang-en .card-body ul li::before {
-            right: auto;
-            left: 0;
-        }
-
-        @media (max-width: 600px) {
-            .app-title {
-                font-size: 2.2rem;
-            }
-            .container {
-                padding: 1.5rem 1rem 3rem 1rem;
-            }
-            .policy-card {
-                padding: 1.35rem;
-            }
-            .meta-grid {
-                grid-template-columns: 1fr;
-            }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <main class="card">
         
-        <!-- Header Nav with Language Switcher -->
-        <header class="header-nav">
-            <div style="display: flex; align-items: center; gap: 0.6rem;">
-                <span style="font-weight: 700; color: var(--gold-light);" id="nav-brand">الرحيق المختوم</span>
-                <span class="badge" id="nav-status">وثيقة رسمية</span>
-            </div>
-            <button class="lang-switch" id="langToggleBtn" onclick="toggleLanguage()">
-                <span>🌐 English</span>
-            </button>
+        <header class="header">
+            <img src="app_logo.png" alt="شعار تطبيق الرحيق المختوم" class="logo">
+            <h1 class="app-name">الرحيق المختوم</h1>
+            <div class="doc-title">سياسة الخصوصية | Privacy Policy</div>
         </header>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <img src="app_logo.png" alt="شعار تطبيق الرحيق المختوم" class="app-logo">
-            <h1 class="app-title" id="hero-title">سياسة الخصوصية</h1>
-            <p class="subtitle" id="hero-subtitle">تطبيق «الرحيق المختوم» لقراءة وبحث السيرة النبوية الشريفة على صاحبها أفضل الصلاة وأزكى السلام</p>
-            <div class="badge-list">
-                <span class="badge" id="badge-offline">🔒 يعمل ١٠٠٪ دون إنترنت</span>
-                <span class="badge" id="badge-noads">🚫 خالٍ تماماً من الإعلانات</span>
-                <span class="badge" id="badge-nodata">🛡️ لا نجمع أي بيانات شخصية</span>
-                <span class="badge" id="badge-family">👨‍👩‍👧‍👦 آمن لجميع أفراد الأسرة</span>
+        <!-- القسم العربي -->
+        <article class="content">
+            <p>
+                تطبيق <strong>«الرحيق المختوم»</strong> مخصص لقراءة وبحث السيرة النبوية المطهرة، وهو مصمم باحترام تام لخصوصية المستخدم:
+            </p>
+            <ul class="points">
+                <li><strong>عدم جمع أي بيانات:</strong> لا يقوم التطبيق بجمع أو حفظ أو تتبع أو مشاركة أي بيانات شخصية أو معلومات عنك أو عن جهازك نهائياً.</li>
+                <li><strong>العمل دون إنترنت:</strong> يعمل التطبيق بالكامل محلياً (Offline)، ولا يتطلب أي اتصال بالشبكة، ولا يطلب أي صلاحيات حساسة على الهاتف.</li>
+                <li><strong>خالٍ من الإعلانات والتتبع:</strong> التطبيق خالٍ تماماً من الإعلانات التجارية، ولا يحتوي على أي حزم تتبع أو تحليلات لأطراف ثالثة.</li>
+                <li><strong>حفظ الملاحظات محلياً:</strong> تُحفظ علامات القراءة والملاحظات حصرياً في ذاكرة جهازك فقط، ويمكنك مسحها متى شئت بمسح بيانات التطبيق أو حذفه.</li>
+            </ul>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- English Section (For Google Play Reviewers) -->
+        <article class="en-section">
+            <h3>English Summary</h3>
+            <p><strong>Ar-Raheeq Al-Makhtum</strong> is an authentic offline reader for the Prophet's Biography (Seerah):</p>
+            <ul>
+                <li><strong>Zero Data Collection:</strong> We do not collect, store, track, or share any personal data or device information.</li>
+                <li><strong>100% Offline:</strong> The application functions completely offline and requests no sensitive runtime permissions.</li>
+                <li><strong>No Ads & No Trackers:</strong> The app is strictly ad-free and contains no third-party analytics or tracking SDKs.</li>
+                <li><strong>Local Storage:</strong> All bookmarks and notes remain strictly on your device and can be deleted by clearing app storage or uninstalling.</li>
+            </ul>
+        </article>
+
+        <footer class="footer">
+            <div>آخر تحديث: أكتوبر ٢٠٢٦ م | Last updated: October 2026</div>
+            <div style="margin-top: 0.4rem;">
+                <a href="https://github.com/jswa/raheeq-privacy" target="_blank" rel="noopener">مستودع المشروع على GitHub</a>
             </div>
-        </section>
-
-        <!-- Executive Summary -->
-        <section class="summary-banner">
-            <div class="summary-title" id="summary-title">
-                <span>📜</span>
-                <span>خلاصة وثيقة الخصوصية</span>
-            </div>
-            <p class="summary-text" id="summary-text">
-                نحن نحترم خصوصيتك احتراماً مطلقاً. إن تطبيق <strong>«الرحيق المختوم»</strong> صُمم ليكون تطبيقاً معرفياً إسلامياً خالصاً، يعمل بالكامل على جهازك دون الحاجة للاتصال بالإنترنت، ولا يطلب إنشاء أي حسابات، ولا يقوم بجمع أو تسجيل أو نقل أو بيع أو مشاركة أي معلومات شخصية أو بيانات تعريفية عنك أو عن جهازك على الإطلاق.
-            </p>
-        </section>
-
-        <!-- Sections Container -->
-        <main id="content-container">
-
-            <!-- Card 1: Data Collection -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">1</div>
-                    <h2 class="card-title" id="t-card1-title">١. عدم جمع أي بيانات شخصية (Zero Data Collection)</h2>
-                </div>
-                <div class="card-body" id="t-card1-body">
-                    <p>لا يقوم التطبيق بجمع أو حفظ أو طلب أي نوع من البيانات الآتية:</p>
-                    <ul>
-                        <li><strong>البيانات الشخصية:</strong> لا نطلب اسمك، ولا بريدك الإلكتروني، ولا رقم هاتفك، ولا تاريخ ميلادك.</li>
-                        <li><strong>بيانات الموقع الجغرافي:</strong> لا نطلب صلاحية تحديد الموقع (GPS) ولا نتتبع مكان وجودك نهائياً.</li>
-                        <li><strong>معرفات الأجهزة:</strong> لا نقوم بقراءة معرف الجهاز (IMEI) أو عنوان (MAC Address) أو عنوان (IP).</li>
-                        <li><strong>الوسائط والملفات:</strong> لا يستطيع التطبيق الوصول إلى صورك أو ملفاتك أو جهات اتصالك.</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Card 2: Offline Operation & Architecture -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">2</div>
-                    <h2 class="card-title" id="t-card2-title">٢. التشغيل المحلي دون اتصال بالإنترنت (Offline First)</h2>
-                </div>
-                <div class="card-body" id="t-card2-body">
-                    <p>
-                        إن كامل محتوى كتاب «الرحيق المختوم» وفهارسه وبيانات الأعلام والأماكن مخزنة داخلياً ومضمنة في حزمة التطبيق.
-                    </p>
-                    <div class="highlight-box">
-                        <strong>ملاحظة تقنية:</strong> التطبيق لا يطلب حتى إذن الاتصال بالإنترنت (<code>android.permission.INTERNET</code>)، مما يعني استحالة إرسال أي بايت من البيانات من جهازك إلى أي خادم خارجي.
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 3: Local Storage & User Notes -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">3</div>
-                    <h2 class="card-title" id="t-card3-title">٣. حفظ الإشارات والملاحظات محلياً على جهازك</h2>
-                </div>
-                <div class="card-body" id="t-card3-body">
-                    <p>
-                        يتيح التطبيق ميزات تخصيص القراءة مثل: إضافة علامة توقف القراءة (Bookmark)، وتدوين الملاحظات الشخصية، وتظليل النصوص، وضبط حجم الخط ومظهر الواجهة.
-                    </p>
-                    <p>
-                        جميع هذه الإعدادات والملاحظات تُحفظ <strong>محلياً وحصرياً</strong> داخل مجلد التطبيق الآمن في الذاكرة الداخلية لهاتفك، ولا يمكن لأي تطبيق آخر أو طرف ثالث الوصول إليها، كما لا يتم رفعها أو مزامنتها مع أي سحابة إلكترونية.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Card 4: No Ads & No Trackers -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">4</div>
-                    <h2 class="card-title" id="t-card4-title">٤. خلو التطبيق من الإعلانات وحزم التتبع (No Ads & Trackers)</h2>
-                </div>
-                <div class="card-body" id="t-card4-body">
-                    <p>
-                        احتراماً لقدسية السيرة النبوية الشريفة وراحة القارئ الكريم، فإن التطبيق:
-                    </p>
-                    <ul>
-                        <li>خالٍ تماماً وبشكل دائم من أي إعلانات تجارية (No AdMob, No Unity Ads).</li>
-                        <li>لا يتضمن أي مكتبات أو حزم برمجية لأطراف ثالثة لجمع التحليلات أو السلوك (No Google Analytics, No Firebase Analytics, No AppsFlyer).</li>
-                        <li>لا يحتوي على أي أدوات للربط مع شبكات التواصل الاجتماعي للتتبع.</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Card 5: App Permissions -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">5</div>
-                    <h2 class="card-title" id="t-card5-title">٥. الصلاحيات والأذونات (Permissions)</h2>
-                </div>
-                <div class="card-body" id="t-card5-body">
-                    <p>
-                        لا يطلب تطبيق «الرحيق المختوم» أي أذونات حساسة على نظام أندرويد:
-                    </p>
-                    <ul>
-                        <li>لا يطلب الوصول للكاميرا أو الميكروفون.</li>
-                        <li>لا يطلب قراءة جهات الاتصال أو الرسائل.</li>
-                        <li>لا يطلب الوصول إلى الذاكرة الخارجية أو الصور.</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Card 6: Children and Family Policy -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">6</div>
-                    <h2 class="card-title" id="t-card6-title">٦. خصوصية الأطفال والأسرة (Family & Children)</h2>
-                </div>
-                <div class="card-body" id="t-card6-body">
-                    <p>
-                        التطبيق موجه لجميع الفئات العمرية والأسرة المسلمة، ومتوافق تماماً مع متطلبات سياسة عائلة Google Play وقوانين حماية خصوصية الأطفال على الإنترنت (COPPA) واللائحة العامة لحماية البيانات (GDPR):
-                    </p>
-                    <ul>
-                        <li>المحتوى موثوق ومأمون بالكامل ويختص بالسيرة النبوية العطرة.</li>
-                        <li>لا يحتوي على أي محتوى غير لائق أو روابط خارجية مشبوهة.</li>
-                        <li>لا يجمع أي معلومات من الأطفال أو أولياء أمورهم.</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Card 7: Data Deletion & User Control -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">7</div>
-                    <h2 class="card-title" id="t-card7-title">٧. حذف البيانات والتحكم الكامل للمستخدم</h2>
-                </div>
-                <div class="card-body" id="t-card7-body">
-                    <p>
-                        نظراً لأن جميع بيانات القراءة والملاحظات مخزنة محلياً فقط على جهازك، فإنك تملك السيطرة الكاملة والمطلقة عليها:
-                    </p>
-                    <p>
-                        يمكنك حذف جميع بيانات التطبيق وملاحظاتك وإشاراتك في أي لحظة وبشكل نهائي عبر خيار (مسح بيانات التطبيق / Clear Data) من إعدادات نظام هاتفك، أو بمجرد إزالة تثبيت التطبيق من جهازك.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Card 8: App Details -->
-            <article class="policy-card">
-                <div class="card-header">
-                    <div class="card-icon">8</div>
-                    <h2 class="card-title" id="t-card8-title">٨. المواصفات الفنية للتطبيق (Technical Metadata)</h2>
-                </div>
-                <div class="card-body" id="t-card8-body">
-                    <div class="meta-grid">
-                        <div class="meta-item">
-                            <div class="meta-label">اسم التطبيق الرسمي</div>
-                            <div class="meta-value">الرحيق المختوم</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">معرف الحزمة (Package Name)</div>
-                            <div class="meta-value">org.raheeq.raheeq_reader</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">الإصدار (Version)</div>
-                            <div class="meta-value">1.0.0 (Build 1)</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">تاريخ السريان وآخر تحديث</div>
-                            <div class="meta-value">أكتوبر ٢٠٢٦ م / ربيع الآخر ١٤٤٨ هـ</div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 9: Contact Information -->
-            <section class="contact-card">
-                <h2 style="color: var(--gold-light); font-size: 1.6rem; margin-bottom: 0.75rem;" id="t-contact-title">للتواصل والاستفسارات</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" id="t-contact-desc">
-                    إذا كان لديك أي سؤال أو استفسار حول سياسة الخصوصية هذه أو حول تطبيق الرحيق المختوم، يسعدنا تواصلكم المباشر عبر البريد الإلكتروني:
-                </p>
-                <a href="mailto:jswa123@gmail.com" class="contact-btn">
-                    <span>✉️</span>
-                    <span>jswa123@gmail.com</span>
-                </a>
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <p id="footer-text">
-                جميع الحقوق محفوظة © ٢٠٢٦ | تطبيق «الرحيق المختوم» — قراءة وبحث في السيرة النبوية المطهرة.
-            </p>
-            <p style="margin-top: 0.5rem;">
-                <a href="https://github.com/jswa/raheeq-reader" target="_blank" rel="noopener">مستودع المشروع على GitHub</a>
-            </p>
         </footer>
 
-    </div>
+    </main>
 
-    <!-- Dual Language Toggle Script -->
-    <script>
-        let currentLang = 'ar';
-
-        const translations = {
-            ar: {
-                dir: 'rtl',
-                title: 'سياسة الخصوصية | تطبيق الرحيق المختوم',
-                btnText: '🌐 English',
-                brand: 'الرحيق المختوم',
-                status: 'وثيقة رسمية',
-                heroTitle: 'سياسة الخصوصية',
-                heroSubtitle: 'تطبيق «الرحيق المختوم» لقراءة وبحث السيرة النبوية الشريفة على صاحبها أفضل الصلاة وأزكى السلام',
-                badgeOffline: '🔒 يعمل ١٠٠٪ دون إنترنت',
-                badgeNoAds: '🚫 خالٍ تماماً من الإعلانات',
-                badgeNoData: '🛡️ لا نجمع أي بيانات شخصية',
-                badgeFamily: '👨‍👩‍👧‍👦 آمن لجميع أفراد الأسرة',
-                summaryTitle: 'خلاصة وثيقة الخصوصية',
-                summaryText: 'نحن نحترم خصوصيتك احتراماً مطلقاً. إن تطبيق <strong>«الرحيق المختوم»</strong> صُمم ليكون تطبيقاً معرفياً إسلامياً خالصاً، يعمل بالكامل على جهازك دون الحاجة للاتصال بالإنترنت، ولا يطلب إنشاء أي حسابات، ولا يقوم بجمع أو تسجيل أو نقل أو بيع أو مشاركة أي معلومات شخصية أو بيانات تعريفية عنك أو عن جهازك على الإطلاق.',
-                
-                card1Title: '١. عدم جمع أي بيانات شخصية (Zero Data Collection)',
-                card1Body: `<p>لا يقوم التطبيق بجمع أو حفظ أو طلب أي نوع من البيانات الآتية:</p>
-                    <ul>
-                        <li><strong>البيانات الشخصية:</strong> لا نطلب اسمك، ولا بريدك الإلكتروني، ولا رقم هاتفك، ولا تاريخ ميلادك.</li>
-                        <li><strong>بيانات الموقع الجغرافي:</strong> لا نطلب صلاحية تحديد الموقع (GPS) ولا نتتبع مكان وجودك نهائياً.</li>
-                        <li><strong>معرفات الأجهزة:</strong> لا نقوم بقراءة معرف الجهاز (IMEI) أو عنوان (MAC Address) أو عنوان (IP).</li>
-                        <li><strong>الوسائط والملفات:</strong> لا يستطيع التطبيق الوصول إلى صورك أو ملفاتك أو جهات اتصالك.</li>
-                    </ul>`,
-
-                card2Title: '٢. التشغيل المحلي دون اتصال بالإنترنت (Offline First)',
-                card2Body: `<p>إن كامل محتوى كتاب «الرحيق المختوم» وفهارسه وبيانات الأعلام والأماكن مخزنة داخلياً ومضمنة في حزمة التطبيق.</p>
-                    <div class="highlight-box">
-                        <strong>ملاحظة تقنية:</strong> التطبيق لا يطلب حتى إذن الاتصال بالإنترنت (<code>android.permission.INTERNET</code>)، مما يعني استحالة إرسال أي بايت من البيانات من جهازك إلى أي خادم خارجي.
-                    </div>`,
-
-                card3Title: '٣. حفظ الإشارات والملاحظات محلياً على جهازك',
-                card3Body: `<p>يتيح التطبيق ميزات تخصيص القراءة مثل: إضافة علامة توقف القراءة (Bookmark)، وتدوين الملاحظات الشخصية، وتظليل النصوص، وضبط حجم الخط ومظهر الواجهة.</p>
-                    <p>جميع هذه الإعدادات والملاحظات تُحفظ <strong>محلياً وحصرياً</strong> داخل مجلد التطبيق الآمن في الذاكرة الداخلية لهاتفك، ولا يمكن لأي تطبيق آخر أو طرف ثالث الوصول إليها، كما لا يتم رفعها أو مزامنتها مع أي سحابة إلكترونية.</p>`,
-
-                card4Title: '٤. خلو التطبيق من الإعلانات وحزم التتبع (No Ads & Trackers)',
-                card4Body: `<p>احتراماً لقدسية السيرة النبوية الشريفة وراحة القارئ الكريم، فإن التطبيق:</p>
-                    <ul>
-                        <li>خالٍ تماماً وبشكل دائم من أي إعلانات تجارية (No AdMob, No Unity Ads).</li>
-                        <li>لا يتضمن أي مكتبات أو حزم برمجية لأطراف ثالثة لجمع التحليلات أو السلوك (No Google Analytics, No Firebase Analytics, No AppsFlyer).</li>
-                        <li>لا يحتوي على أي أدوات للربط مع شبكات التواصل الاجتماعي للتتبع.</li>
-                    </ul>`,
-
-                card5Title: '٥. الصلاحيات والأذونات (Permissions)',
-                card5Body: `<p>لا يطلب تطبيق «الرحيق المختوم» أي أذونات حساسة على نظام أندرويد:</p>
-                    <ul>
-                        <li>لا يطلب الوصول للكاميرا أو الميكروفون.</li>
-                        <li>لا يطلب قراءة جهات الاتصال أو الرسائل.</li>
-                        <li>لا يطلب الوصول إلى الذاكرة الخارجية أو الصور.</li>
-                    </ul>`,
-
-                card6Title: '٦. خصوصية الأطفال والأسرة (Family & Children)',
-                card6Body: `<p>التطبيق موجه لجميع الفئات العمرية والأسرة المسلمة، ومتوافق تماماً مع متطلبات سياسة عائلة Google Play وقوانين حماية خصوصية الأطفال على الإنترنت (COPPA) واللائحة العامة لحماية البيانات (GDPR):</p>
-                    <ul>
-                        <li>المحتوى موثوق ومأمون بالكامل ويختص بالسيرة النبوية العطرة.</li>
-                        <li>لا يحتوي على أي محتوى غير لائق أو روابط خارجية مشبوهة.</li>
-                        <li>لا يجمع أي معلومات من الأطفال أو أولياء أمورهم.</li>
-                    </ul>`,
-
-                card7Title: '٧. حذف البيانات والتحكم الكامل للمستخدم',
-                card7Body: `<p>نظراً لأن جميع بيانات القراءة والملاحظات مخزنة محلياً فقط على جهازك، فإنك تملك السيطرة الكاملة والمطلقة عليها:</p>
-                    <p>يمكنك حذف جميع بيانات التطبيق وملاحظاتك وإشاراتك في أي لحظة وبشكل نهائي عبر خيار (مسح بيانات التطبيق / Clear Data) من إعدادات نظام هاتفك، أو بمجرد إزالة تثبيت التطبيق من جهازك.</p>`,
-
-                card8Title: '٨. المواصفات الفنية للتطبيق (Technical Metadata)',
-                card8Body: `<div class="meta-grid">
-                        <div class="meta-item">
-                            <div class="meta-label">اسم التطبيق الرسمي</div>
-                            <div class="meta-value">الرحيق المختوم</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">معرف الحزمة (Package Name)</div>
-                            <div class="meta-value">org.raheeq.raheeq_reader</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">الإصدار (Version)</div>
-                            <div class="meta-value">1.0.0 (Build 1)</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">تاريخ السريان وآخر تحديث</div>
-                            <div class="meta-value">أكتوبر ٢٠٢٦ م / ربيع الآخر ١٤٤٨ هـ</div>
-                        </div>
-                    </div>`,
-
-                contactTitle: 'للتواصل والاستفسارات',
-                contactDesc: 'إذا كان لديك أي سؤال أو استفسار حول سياسة الخصوصية هذه أو حول تطبيق الرحيق المختوم، يسعدنا تواصلكم المباشر عبر البريد الإلكتروني:',
-                footerText: 'جميع الحقوق محفوظة © ٢٠٢٦ | تطبيق «الرحيق المختوم» — قراءة وبحث في السيرة النبوية المطهرة.'
-            },
-            en: {
-                dir: 'ltr',
-                title: 'Privacy Policy | Ar-Raheeq Al-Makhtum',
-                btnText: '🌐 العربية',
-                brand: 'Ar-Raheeq Al-Makhtum',
-                status: 'Official Document',
-                heroTitle: 'Privacy Policy',
-                heroSubtitle: 'Ar-Raheeq Al-Makhtum (The Sealed Nectar) - An Authentic Biography of the Prophet Muhammad ﷺ Reader & Search Application',
-                badgeOffline: '🔒 100% Offline by Design',
-                badgeNoAds: '🚫 Completely Ad-Free',
-                badgeNoData: '🛡️ Zero Data Collected',
-                badgeFamily: '👨‍👩‍👧‍👦 Family & Children Safe',
-                summaryTitle: 'Executive Privacy Summary',
-                summaryText: 'We respect your privacy unconditionally. <strong>Ar-Raheeq Al-Makhtum</strong> is designed as a pure educational Islamic application that operates entirely on your device without requiring internet connectivity. It does not require user accounts, nor does it collect, log, transmit, sell, or share any personal information or device identifiers with anyone under any circumstances.',
-
-                card1Title: '1. Zero Personal Data Collection',
-                card1Body: `<p>The application does NOT collect, store, or transmit any of the following data:</p>
-                    <ul>
-                        <li><strong>Personal Information:</strong> We do not ask for your name, email address, phone number, or date of birth.</li>
-                        <li><strong>Location Data:</strong> We do not request GPS location permissions and never track your geographic position.</li>
-                        <li><strong>Device Identifiers:</strong> We do not read device IDs (IMEI), MAC addresses, or IP addresses.</li>
-                        <li><strong>Media & Personal Files:</strong> The app cannot access your photos, camera, microphone, or contacts.</li>
-                    </ul>`,
-
-                card2Title: '2. Offline-First Architecture',
-                card2Body: `<p>The entire text of the book Ar-Raheeq Al-Makhtum, its table of contents, historical figures, and geographic landmarks are bundled locally within the application package.</p>
-                    <div class="highlight-box">
-                        <strong>Technical Proof:</strong> The application does not even request the <code>android.permission.INTERNET</code> permission in its Android manifest, making it technically impossible to transmit any data over the network.
-                    </div>`,
-
-                card3Title: '3. Local On-Device Storage for Notes & Bookmarks',
-                card3Body: `<p>The app offers reader convenience features such as reading bookmarks, personal study notes, text highlights, font preferences, and reading themes.</p>
-                    <p>All of these preferences and user notes are saved <strong>strictly and exclusively</strong> in local application storage on your physical device. They are never synced to any cloud server or accessible by third parties.</p>`,
-
-                card4Title: '4. Strictly No Advertisements & No Tracking SDKs',
-                card4Body: `<p>Out of deep respect for the sacred biography of the Prophet ﷺ and to ensure an uninterrupted reading experience, this application:</p>
-                    <ul>
-                        <li>Contains NO advertising networks (No AdMob, No Unity Ads, etc.).</li>
-                        <li>Contains NO third-party analytical or behavioral tracking SDKs (No Google Analytics, No Firebase Analytics, No AppsFlyer).</li>
-                        <li>Contains NO social media tracking pixels or external tracking beacons.</li>
-                    </ul>`,
-
-                card5Title: '5. Application Permissions',
-                card5Body: `<p>Ar-Raheeq Al-Makhtum requires zero sensitive Android runtime permissions:</p>
-                    <ul>
-                        <li>NO Camera or Microphone access.</li>
-                        <li>NO Contacts or SMS access.</li>
-                        <li>NO External Shared Storage access.</li>
-                    </ul>`,
-
-                card6Title: '6. Family & Children’s Privacy (COPPA & GDPR Compliance)',
-                card6Body: `<p>This application is suitable for audiences of all ages, including children and families, and complies fully with Google Play’s Families Policy, COPPA, and GDPR:</p>
-                    <ul>
-                        <li>The content is authentic, beneficial Islamic biography literature.</li>
-                        <li>It contains no objectionable, adult, or commercial content.</li>
-                        <li>It collects zero personal information from children or adults.</li>
-                    </ul>`,
-
-                card7Title: '7. Data Retention & Full User Control',
-                card7Body: `<p>Because all reading history, bookmarks, and notes are saved strictly on your local device, you retain total ownership and control:</p>
-                    <p>You can permanently delete all stored data at any time by clearing the application storage via Android Settings > Apps > Raheeq Reader > Clear Storage, or simply by uninstalling the application.</p>`,
-
-                card8Title: '8. Technical Metadata',
-                card8Body: `<div class="meta-grid">
-                        <div class="meta-item">
-                            <div class="meta-label">Application Name</div>
-                            <div class="meta-value">الرحيق المختوم (Ar-Raheeq Al-Makhtum)</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Package Identifier</div>
-                            <div class="meta-value">org.raheeq.raheeq_reader</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Release Version</div>
-                            <div class="meta-value">1.0.0 (Build 1)</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Effective Date</div>
-                            <div class="meta-value">October 2026</div>
-                        </div>
-                    </div>`,
-
-                contactTitle: 'Contact & Inquiries',
-                contactDesc: 'If you have any questions or inquiries regarding this Privacy Policy or the Ar-Raheeq Al-Makhtum application, please contact the developer directly:',
-                footerText: 'All rights reserved © 2026 | Ar-Raheeq Al-Makhtum Application — The Authentic Sealed Nectar Seerah Reader.'
-            }
-        };
-
-        function toggleLanguage() {
-            currentLang = (currentLang === 'ar') ? 'en' : 'ar';
-            applyLanguage(currentLang);
-        }
-
-        function applyLanguage(lang) {
-            const t = translations[lang];
-            document.documentElement.lang = lang;
-            document.documentElement.dir = t.dir;
-            document.title = t.title;
-
-            if (lang === 'en') {
-                document.body.classList.add('lang-en');
-            } else {
-                document.body.classList.remove('lang-en');
-            }
-
-            document.getElementById('langToggleBtn').innerHTML = `<span>${t.btnText}</span>`;
-            document.getElementById('nav-brand').textContent = t.brand;
-            document.getElementById('nav-status').textContent = t.status;
-            document.getElementById('hero-title').textContent = t.heroTitle;
-            document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
-            document.getElementById('badge-offline').textContent = t.badgeOffline;
-            document.getElementById('badge-noads').textContent = t.badgeNoAds;
-            document.getElementById('badge-nodata').textContent = t.badgeNoData;
-            document.getElementById('badge-family').textContent = t.badgeFamily;
-
-            document.getElementById('summary-title').children[1].textContent = t.summaryTitle;
-            document.getElementById('summary-text').innerHTML = t.summaryText;
-
-            document.getElementById('t-card1-title').textContent = t.card1Title;
-            document.getElementById('t-card1-body').innerHTML = t.card1Body;
-
-            document.getElementById('t-card2-title').textContent = t.card2Title;
-            document.getElementById('t-card2-body').innerHTML = t.card2Body;
-
-            document.getElementById('t-card3-title').textContent = t.card3Title;
-            document.getElementById('t-card3-body').innerHTML = t.card3Body;
-
-            document.getElementById('t-card4-title').textContent = t.card4Title;
-            document.getElementById('t-card4-body').innerHTML = t.card4Body;
-
-            document.getElementById('t-card5-title').textContent = t.card5Title;
-            document.getElementById('t-card5-body').innerHTML = t.card5Body;
-
-            document.getElementById('t-card6-title').textContent = t.card6Title;
-            document.getElementById('t-card6-body').innerHTML = t.card6Body;
-
-            document.getElementById('t-card7-title').textContent = t.card7Title;
-            document.getElementById('t-card7-body').innerHTML = t.card7Body;
-
-            document.getElementById('t-card8-title').textContent = t.card8Title;
-            document.getElementById('t-card8-body').innerHTML = t.card8Body;
-
-            document.getElementById('t-contact-title').textContent = t.contactTitle;
-            document.getElementById('t-contact-desc').textContent = t.contactDesc;
-            document.getElementById('footer-text').textContent = t.footerText;
-        }
-    </script>
 </body>
 </html>
-
